@@ -2,7 +2,7 @@ const request = require('request')
 const geoCode = require('./geocode')
 
 const forecast = ( lat, long,callback)=>{
-    const url = `https://api.darksky.net/forecast/dafd6bfdd3a241c4c7ee30b51f1900b0/${lat},${long}?lang=uk&units=si`
+    const url = `https://api.darksky.net/forecast/dafd6bfdd3a241c4c7ee30b51f1900b0/${lat},${long}?&units=si`
     const json = true
 request({ url,json},(error , {body})=>{
     if(error){
