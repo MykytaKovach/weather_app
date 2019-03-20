@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',(e)=>{
         e.preventDefault();
         location.innerHTML="Loading"
         forecast.innerHTML= ""
-        fetch(`http://localhost:3000/weather?adress=${document.querySelector('input').value}`).then((res)=>{
+        fetch(`/weather?adress=${document.querySelector('input').value}`).then((res)=>{
         res.json().then((data)=>{
             
             if (data.error) {
